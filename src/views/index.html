@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoVerano2022</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Boogaloo&family=Cabin+Sketch&family=Fredoka+One&family=Indie+Flower&family=Kalam:wght@300;400&family=Voltaire&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --moradoFuerte: #BE9FE1;
+            --moradoLeve: #C9B6E4;
+            --moradoSuperLeve: #E1CCEC;
+            --blancoMorado: #F1F1F6;
+            --Titles: #977ab8;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body{
+            
+        } */
+
+        /* Header  */
+
+        header{            
+            background-color: var(--moradoFuerte);
+            height: 12vh;
+            width: 100vw;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-header{
+            width: 90%;
+            height: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header ul{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+
+        }
+
+        header li{
+            list-style: none;
+            margin-right: 25px;
+        }
+
+        header a{
+            text-decoration: none;
+            color: white;
+            font-weight: 100;
+            font-size: 24px;
+            /* No puedo decidir entre cual tipo de letra */
+            /* font-family: 'Amatic SC', cursive; */
+            font-family: 'Boogaloo', cursive;
+            /* font-family: 'Cabin Sketch', cursive; */
+            /* font-family: 'Fredoka One', cursive; */
+            /* font-family: 'Indie Flower', cursive; */
+            /* font-family: 'Kalam', cursive; */
+            /* font-family: 'Voltaire', sans-serif; */
+            
+        }
+
+        img.logo{
+            height: 70%;
+        }
+
+        .container-logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1{
+            margin: 0;
+            color: white;
+            margin-left: 5px;
+            font-family: 'Amatic SC', cursive;
+            font-size: 48px;
+
+        }
+
+        /* Main  */
+
+        main{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-paragraph{
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 1000px;
+            text-align: justify;
+        }
+
+        .container-paragraph h1{
+            /* font-family: 'Amatic SC', cursive; */
+            /* font-family: 'Boogaloo', cursive; */
+            /* font-family: 'Cabin Sketch', cursive; */
+            /* font-family: 'Fredoka One', cursive; */
+            /* font-family: 'Indie Flower', cursive; */
+            font-family: 'Kalam', cursive;
+            /* font-family: 'Voltaire', sans-serif; */
+            color: var(--Titles);
+        }
+
+        .container-paragraph p{
+            /* font-family: 'Amatic SC', cursive; */
+            /* font-family: 'Boogaloo', cursive; */
+            /* font-family: 'Cabin Sketch', cursive; */
+            /* font-family: 'Fredoka One', cursive; */
+            /* font-family: 'Indie Flower', cursive; */
+            /* font-family: 'Kalam', cursive; */
+            font-family: 'Voltaire', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="container-logo">
+                <img src="../public/Img/Turquesa y Crema Floral Belleza Logo (2).png" alt="" class="logo">
+                <h1>YANA</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#">About <i class="fa-solid fa-address-card"></i></a></li>
+                <li><a href="#">LogIn</a></li>
+                <li><a href="#">SignUp</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container-paragraph">
+            <h1>Salud mental y escuela</h1>
+            <p>La salud mental de los niños y los adolescentes representa uno de los
+                grandes retos que deben enfrentar las instituciones educativas hoy
+                en día. A la vez que deben proveer un ambiente seguro y conable
+                para el desarrollo de las habilidades cognitivas, emocionales y
+                sociales necesarias para sentar las bases de la salud mental, deben
+                dar respuesta a un número creciente de problemas psicosociales y
+                comportamentales que afectan profundamente el aprendizaje, la
+                convivencia y el rendimiento escolar. </p>
+                <p>Dado que es en el entorno escolar
+                    donde transcurre gran parte de la
+                   vida de los niños y los adolescentes,
+                   la comunidad educativa, principalmente
+                   los docentes, adquieren un rol importante
+                   a la hora de promover el bienestar y minimizar los problemas de salud mental. Los
+                   escenarios educativos promueven la salud
+                   mental en la medida que le brindan a sus estudiantes la capacidad de relacionarse con
+                   los otros y de adquirir un sentido de identidad, autoestima, seguridad, pertenencia,
+                   dominio, apoyo y participación social, de tal
+                   La salud mental de los niños y los adolescentes representa uno de los
+                   grandes retos que deben enfrentar las instituciones educativas hoy
+                   en día. A la vez que deben proveer un ambiente seguro y confiable
+                   para el desarrollo de las habilidades cognitivas, emocionales y
+                   sociales necesarias para sentar las bases de la salud mental, deben
+                   dar respuesta a un número creciente de problemas psicosociales y
+                   comportamentales que afectan profundamente el aprendizaje, la
+                   convivencia y el rendimiento escolar.
+                   por: María José Sarmiento
+                   Nuestro
+                   Diario Vivir Programa Intervenciones en Salud Mental PUJ-HUSI
+                   con apoyo de Colciencias
+                   programa intervenciones en salud mental. pontificia universidad javeriana - hospital universitario san ignacio. con apoyo de colciencias (697-14)
+                   BOGOTÁ, D.C. | 2017
+                   </p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+</body>
+</html>

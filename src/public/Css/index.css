@@ -1,0 +1,72 @@
+
+    :root{
+        --moradoFuerte: #BE9FE1;
+        --moradoLeve: #C9B6E4;
+        --moradoSuperLeve: #E1CCEC;
+        --blancoMorado: #F1F1F6;
+        --Titles: #8c6dae;
+        --separator: #ad75fa8f;
+    }
+
+    main{
+        width: 90vw;
+    }
+
+    .container-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: justify;
+    }
+
+    .container-info h1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 750;
+        font-size: 2.5rem;
+        color: var(--Titles);
+        margin-bottom: 40px;
+        margin-top: 100px;
+    }
+
+    .container-info p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    
+    @media (max-width: 1000px) {
+
+        main{
+            width: 90vw;
+            min-width: 0;
+        }
+
+    .container-info h1{
+        font-size: 2.5rem;
+        margin: 30px 0;
+    }
+
+    .container-info p{
+        font-size: 1.5rem;
+    }
+
+    }
+
+    @media (max-width: 600px) {
+
+    main{
+        width: 90vw;
+        min-width: 0;
+    }
+
+    .container-info h1{
+        font-size: 2rem;
+        color: var(--Titles);
+        margin: 20px 0;
+    }
+
+    .container-info p{
+        font-size: 1.2rem;
+    }
+
+    }

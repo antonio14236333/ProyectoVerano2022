@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAVA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/prueba/Css/nav-dash.css">
+    <link rel="stylesheet" href="./Css/chart.css">
+    <style>
+
+:root{
+        --Morado1: #BE9FE1;
+        --Morado2: #C9B6E4;
+        --Morado3: #E1CCEC;
+        --Morado4: #F1F1F6;
+        --Title-color: #8665ad;
+        --Text-color: #4D4D4D;
+        --Title: 'Montserrat', sans-serif;
+        --Text: 'Roboto', sans-serif;
+    }
+
+    .title-chart{
+        margin-top: 30px;
+        font-family: var(--Title);
+        font-weight: 400;
+    }
+
+        .right{
+            background-color: var(--Morado4);
+        }
+
+        .chart{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row{
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        .chart-33{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0;
+            background-color: white;
+            width: 30%;
+            height: 30vh;
+            box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+            border-radius: 10px;
+        }
+
+        .chart-50{
+            margin: 28px 0;
+            background-color: white;
+            width: 45%;
+            height: 40vh;
+            box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+            border-radius: 10px;
+            overflow-y: scroll;
+        }
+
+        .chart-50::-webkit-scrollbar {
+            display: none;
+        }
+        
+        
+.container-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--Title);
+}
+
+
+.title{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+.title h1{
+    font-weight: 400;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+.container-table .new{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
+.new a{
+    height: 40px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--Title);
+    border-radius: 10px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    border: none;
+}
+
+.new a:active{
+    background-color: #79c27b;
+}
+
+
+
+th{
+    text-align: center;
+    height: 50px;  
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+td{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+td a{
+    text-decoration: none;
+    color: var(--Text-color);
+}
+
+td button{
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+
+td button:nth-child(1){
+    background-color: #f44336;
+    color: white;
+}
+
+td button:active{
+    background-color: rebeccapurple;
+}
+
+thead tr{
+    background-color: var(--Morado1);
+
+}
+
+tr{
+    width: 100%;
+}
+
+
+
+tbody tr:nth-child(even){
+    background-color: var(--Morado4);
+}
+
+tbody tr:nth-last-child(1){
+    margin-bottom: 50px;
+
+}
+
+    </style>
+</head>
+<body>
+        <header>
+            <div>
+                <div class="menuToggle"></div>
+            </div>
+            
+
+            <section class="logo">
+                <img src="../src/public/Img/Logo.png" alt="Logo de KAVA" class="logo">
+                <h1>KAVA</h1>
+            </section>
+
+            <div class="dropdown-container">
+                <span>Antonio &nbsp;<i class="fa-solid fa-caret-down"></i></span>
+                <ul id="list">
+                    <li>Configuración &nbsp;<i class="fa-solid fa-gear"></i></li>
+                    <div class="separator"></div>
+                    <li class="signOut">Sign Out &nbsp;<i class="fa-solid fa-right-from-bracket"></i></li>
+                </ul>
+            </div>
+
+        </header>
+        <main>
+            <aside class="navigation">
+                <h1>Menú</h1>
+                <div class="separator-menu"></div>
+                    <div>
+                        <a  href="./groups.html"  class="active"><i class="fa-solid fa-school"></i><span>Grupos</span> </a>
+                    </div>
+                    <div class="separator-menu"></div>
+                    <div>
+                        <a href="./students.html"><i class="fa-solid fa-graduation-cap"></i><span>Alumnos</span></a>
+                    </div>
+                    <div class="separator-menu"></div>
+                    <div>
+                        <a href="./forms.html"><i class="fa-solid fa-rectangle-list"></i><span>Formularios</span></a>
+                    </div>
+            </aside>
+            <section class="right">
+                <section class="chart">
+                    <h1 class="title-chart">Grupo 1</h1>
+                    <section class="row">
+                        <div class="chart-33">
+                            <div style="height: 90%; width: 90%;">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                            
+                        </div>
+                        <div class="chart-33">
+                            <div style="height: 90%; width: 90%;">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-33">
+                            <div style="height: 90%; width: 90%;">
+                                <canvas id="myChart3"></canvas>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="row">
+                        <div class="chart-50">
+                            <div class="container-table">
+                                <table>
+                                    <thead>
+                                        <div class="title">
+                                            <h1>Alumnos</h1> 
+                                            <div class="new">
+                                                <a href="./newStudent.html">Inscribir&nbsp;</a>
+                                            </div>
+                                        </div>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Status</th>
+                                            <th>Expulsar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="./student.html">González del Río Juan Antonio</a></td>
+                                            <td>Normal</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Normal</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Ansiedad</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Triste</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Normal</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Ansiedad</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Enojado</td>
+                                            <td><button><i class="fa-solid fa-trash-can"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="chart-50">
+                            <div class="container-table">
+                                <table>
+                                    <thead>
+                                        <div class="title">
+                                            <h1>Alumnos en riesgo</h1>
+                                        </div>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Ansiedad</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Triste</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Ansiedad</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td><a href="">González del Río Juan Antonio</a></td>
+                                            <td>Enojado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+            </section>
+                
+            
+    
+    
+    
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(75, 192, 192)',
+                'rgb(255, 205, 86)',
+                'rgb(201, 203, 207)',
+                'rgb(54, 162, 235)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+    const data3 = {
+        labels: [ 'January', 'February', 'March', 'April', 'May', 'June',],
+        datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(75, 192, 192)',
+        borderColor: 'rgb(75, 192, 192)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    };
+
+    const config3 = {
+        type: 'line',
+        data: data3,
+        options: {
+            maintainAspectRatio: false
+        }
+    };
+
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+
+
+    const data2 = {
+        labels: [
+            'Red',
+            'Green',
+            'Yellow',
+            'Grey',
+            'Blue'
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [11, 16, 7, 3, 14],
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)'
+            ]
+        }]
+    };
+
+    const config2 = {
+        type: 'polarArea',
+        data: data2,
+        options: {
+            maintainAspectRatio: false
+        }
+    };
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+
+
+    </script>
+    <script src="./JavaScript/nav-dash.js"></script>
+    <script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

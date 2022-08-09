@@ -1,0 +1,149 @@
+:root{
+    --Morado1: #BE9FE1;
+    --Morado2: #C9B6E4;
+    --Morado3: #E1CCEC;
+    --Morado4: #F1F1F6;
+    --Title-color: #8665ad;
+    --Text-color: #4D4D4D;
+    --Title: 'Montserrat', sans-serif;
+    --Text: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+}
+
+.container-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--Title);
+}
+
+
+.container-table h1{
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.container-table .search{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container-table input{
+    height: 30px;
+    border-radius: 8px;
+    width: 250px;
+    margin-right: 35px;
+    font-size: 1.2rem;
+}
+
+.container-table .search button{
+    height: 30px;
+    width: 100px;
+    background-color: var(--Morado3);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+    font-family: var(--Title);
+}
+
+.container-table .search button:active{
+    background-color: #72647a;
+}
+
+table{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+}
+
+.container-table span {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.container-table .new{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.new a{
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--Title);
+    border-radius: 10px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    border: none;
+}
+
+.new a:active{
+    background-color: #79c27b;
+}
+
+th{
+    width: 200px;
+    text-align: center;
+    height: 50px;  
+    color: white;
+    font-weight: 400;
+}
+
+td{
+    width: 200px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+td a{
+    text-decoration: none;
+    color: var(--Text-color);
+}
+
+td button{
+    font-size: 2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+td button:nth-child(1){
+    background-color: #008CBA;
+    color: white;
+}
+
+td button:nth-child(2){
+    background-color: #f44336;
+    color: white;
+}
+
+td button:active{
+    background-color: rebeccapurple;
+}
+
+thead tr{
+    background-color: var(--Morado1);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--Morado4);
+}
+
+tbody tr:nth-last-child(1){
+    margin-bottom: 50px;
+
+}

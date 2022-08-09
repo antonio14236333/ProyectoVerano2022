@@ -1,0 +1,146 @@
+    :root{
+        --Morado1: #BE9FE1;
+        --Morado2: #C9B6E4;
+        --Morado3: #E1CCEC;
+        --Morado4: #F1F1F6;
+        --Title-color: #8665ad;
+        --Text-color: #4D4D4D;
+        --Title: 'Montserrat', sans-serif;
+        --Text: 'Roboto', sans-serif;
+    }
+
+    *{
+        margin: 0;
+    }
+
+
+    header{
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        background-color: var(--Morado1);
+        font-family: var(--Title);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+        z-index: 100;
+    }
+
+    .logo{
+        margin-left: 5%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo h1{
+        font-size: 4rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    .logo img{
+        height: 80%;
+    }
+
+    .links{
+        
+        margin-right: 5%;
+        font-size: 2rem;
+    }
+
+    .links a{
+        position: relative;
+        text-decoration: none;
+        color: white;
+        margin-right: 32px;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .links a:last-child{
+        margin: 0;
+    }
+
+    .links a:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        background: var(--Morado4);
+        height: 3px;
+        width: 100%;
+        transition: left .8s;
+    }
+
+    .links a:hover:after{
+        left: 0;
+    }
+
+    .links a.active:after{
+        left: 0;
+    }
+
+    .links i{
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 30.5px;
+    }
+
+    @media(max-width: 850px){
+        .links.show a{
+            padding: 15px 0;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid black;
+        }
+
+        .links.show a:nth-last-child(2){
+            border: 0;
+        }
+
+        .links i{
+            display: flex;
+            justify-content: center;
+            width: 28px;
+            height: 32px;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .links a:after{
+            display: none;
+        }
+
+        header{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .links a{
+            display: none;
+            color: black;
+            
+        }
+
+        .links{
+            box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+        }
+
+
+        .links.show{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            width: 100%;
+            transition: 0.5s all;
+        }
+
+        
+
+        
+    }

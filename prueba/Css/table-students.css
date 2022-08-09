@@ -1,0 +1,20 @@
+thead th:nth-child(1){
+    width: 80px;
+}
+tbody td:nth-child(1){
+    width: 80px;
+}
+
+thead th:nth-child(2){
+    width: 450px;
+}
+tbody td:nth-child(2){
+    width: 450px;
+}
+
+thead th:nth-child(3){
+    width: 180px;
+}
+tbody td:nth-child(3){
+    width: 180px;
+}

@@ -1,0 +1,134 @@
+:root{
+    --Morado1: #BE9FE1;
+    --Morado2: #C9B6E4;
+    --Morado3: #E1CCEC;
+    --Morado4: #F1F1F6;
+    --Title-color: #8665ad;
+    --Text-color: #4D4D4D;
+    --Title: 'Montserrat', sans-serif;
+    --Text: 'Roboto', sans-serif;
+    }
+
+    main{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .rectangle{
+        position: absolute;
+        background: var(--Morado3);
+        border-radius: 20px;
+        z-index: -1;
+    }
+
+    svg.tri{
+        position: absolute;
+        z-index: -1;
+    }
+
+    svg.x{
+        position: absolute;
+        z-index: -1;
+    }
+
+    .circle{
+        position: absolute;
+        border-radius: 50%;
+        border: 10px solid var(--Morado2);
+        z-index: -1;
+    }
+
+    .board3x3 .box .circle{
+        background-color: transparent;
+    } 
+
+    .circleFill{
+        border-radius: 50%;
+        background-color: var(--Morado2);
+        z-index: -1;
+    }
+
+    .board3x3 {
+        position: absolute;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        z-index: -1;
+    }
+
+    .board3x3 .circle, .board3x3 .circleFill{
+        position: static;
+        height: 80%;
+        width: 80%;
+        border: 5px solid var(--Morado2);
+    }
+
+
+
+    .circles .circle:nth-child(1){
+        width: 200px; height: 200px; left: -100px; top: 0px;
+    }
+    .circles .circle:nth-child(2){
+        width: 300px; height: 300px; right: 50px; bottom: -50px; background-color: #C9B6E4;
+    }
+    .circles .circle:nth-child(3){
+        width: 100px; height: 100px; right: 50%; top: 10%;  background-color: #C9B6E4;
+    }
+    .circles .circle:nth-child(4){
+        width: 80px; height: 80px; left: 30%; bottom: 30%;  background-color: #C9B6E4;
+    }
+
+
+
+    .rectangle:nth-child(1){
+        width: 800px; height: 300px; right: 0px; top: -30px; transform: rotate(-15deg);
+    }
+    .rectangle:nth-child(2){
+        width: 800px; height: 300px; left: 0px; bottom: -100px; transform: rotate(-5deg);
+    }
+
+
+
+    .tri:nth-child(1){
+        left: 500px; top: 100px; transform: rotate(80deg); 
+    }
+    .tri:nth-child(2){
+        right: -30px; bottom: 50%; transform: rotate(45deg);
+    }
+    .tri:nth-child(3){
+        left: -30px; bottom: 40%; transform: rotate(65deg);
+    }
+    .tri:nth-child(4){
+        left: 50%; bottom: 0; transform: rotate(80deg); 
+    }
+
+
+
+    .board3x3:nth-child(1){
+        width: 200px; height: 200px; left: 400px; bottom: 45%; transform: rotate(-5deg);
+    }
+    .board3x3:nth-child(2){
+        width: 150px; height: 150px; right: 30%; bottom: 30%; transform: rotate(30deg);
+    }
+
+
+
+    .x:nth-child(1){
+        left: 70%; bottom: 10%; transform: rotate(8deg); width: 60px; height: 60px;
+    }
+    .x:nth-child(2){
+        left: 10%; bottom: 70%; transform: rotate(-15deg); width: 50px; height: 50px;
+    }
+    .x:nth-child(3){
+        left: 95%; bottom: 70%; transform: rotate(25deg); width: 90px; height: 90px;
+    }
+    .x:nth-child(4){
+        left: 15%; bottom: 20%; transform: rotate(5deg); width: 75px; height: 75px;
+    }
+

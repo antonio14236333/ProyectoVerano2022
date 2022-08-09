@@ -1,0 +1,198 @@
+        :root{
+            --moradoFuerte: #BE9FE1;
+            --moradoLeve: #C9B6E4;
+            --moradoSuperLeve: #E1CCEC;
+            --blancoMorado: #F1F1F6;
+            --Titles: #8c6dae;
+            --Border: #b192d3;
+            --separator: #ad75fa8f;
+        }
+    
+
+        *{
+            margin: 0;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+
+        header{
+            height: 125px;
+            width: 100vw;
+            background-color: var(--moradoFuerte);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header  .active{
+            border-bottom: 3px solid var(--blancoMorado);
+        }
+        header h1{
+            margin: 0;
+            color: white;
+            margin-left: 5px;
+            font-weight: 400;
+            font-size: 4rem;
+        }
+
+        header a{
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 2em;
+            margin-right: 4vw;
+        }
+
+        a:hover{
+            color: white;
+        }
+
+        .logo{
+            height: 84px;
+        }
+
+        .container-header{
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .container-logo{
+            display: flex;
+            align-items: center;
+        }
+
+        .container-links{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+
+        .container-links .icon{
+            position: absolute;
+            margin: 0;
+            right: 5%;
+            top: 28px;
+            display: none;
+            font-size: 30px;
+        }
+
+        @media (max-width: 1000px) {
+
+            header{
+                width: 100vw;
+                min-width: 0;
+                height: 100px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            header h1{
+                font-size: 4.3em;
+            }
+
+            header a{
+                font-size: 2em;
+            }
+
+            .logo{
+                height: 100px;
+            }
+
+            .container-links a{
+                display: none;
+            }
+
+            .container-links .icon{
+                display: block;
+            }
+            
+            .container-header.responsive .container-links .icon{
+                top: 10px;
+                font-size: 40px;
+            }
+
+            .container-header.responsive{
+                flex-direction: column;
+            }
+
+            .container-header.responsive .container-links{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.5s ease 0s;
+                background-color: var(--moradoSuperLeve);
+            }
+            
+            .container-header.responsive .container-links a{
+                display: block;
+                margin: 10px 0;
+            }
+
+            .container-header.responsive .separator{
+                border-bottom: 3px solid var(--separator);
+                width: 90%;
+            }
+        }
+
+        @media(max-width: 600px){
+            header{
+                width: 100vw;
+                min-width: 0;
+                height: 80px;
+            }
+
+            header h1{
+                font-size: 3.8em;
+            }
+
+            header a{
+                font-size: 1.5em;
+            }
+
+            .logo{
+                height: 80px;
+            }
+            
+            .container-header.responsive .container-links .icon{
+                top: 0;
+                font-size: 40px;
+            }
+
+            .container-links .icon{
+                top: 18px;
+                font-size: 30px;
+            }
+
+            .container-header.responsive{
+                flex-direction: column;
+            }
+
+            .container-header.responsive .container-links{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                transition: all 1s ease 0s;
+                background-color: var(--moradoSuperLeve);
+            }
+            
+            .container-header.responsive .container-links a{
+                display: block;
+                margin: 5px 0;
+            }
+
+
+        }

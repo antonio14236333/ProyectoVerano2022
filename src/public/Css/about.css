@@ -1,0 +1,127 @@
+
+    :root{
+        --moradoFuerte: #BE9FE1;
+        --moradoLeve: #C9B6E4;
+        --moradoSuperLeve: #E1CCEC;
+        --blancoMorado: #F1F1F6;
+        --Titles: #8c6dae;
+        --Border: #b192d3;
+        --separator: #ad75fa8f;
+    }
+    
+        .container-cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 200px;
+        }
+    
+        .card{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            margin: 25px 50px;
+            width:500px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--Border);
+        }
+    
+        .card p{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+        }
+    
+        .up-card{
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+        }
+    
+        .up-card img{
+            width: 100%;
+            height: 200px;
+            border-bottom: 3px solid var(--Border);
+        }
+    
+        .center-card{
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+    
+        .center-card img{
+            border: 3px solid var(--Border);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+    
+        .down-card{
+            height: 76%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: justify;
+        }
+    
+        .down-card h1{
+            margin-top: 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--Titles);
+        }
+    
+        .down-card ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        
+        .down-card li{
+            background-color: var(--moradoFuerte);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+        }
+    
+        .down-card-data{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .down-card-data-border{
+            position: absolute;
+            width: 160px;
+            height: 60px;
+            right: -40px;
+            bottom: 0;
+            border-top-left-radius: 15px;
+            border-left: 3px solid var(--Border);
+            border-top: 3px solid var(--Border);
+        }
+    
+        .down-card-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    

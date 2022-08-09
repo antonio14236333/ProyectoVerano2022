@@ -1,0 +1,131 @@
+:root{
+    --moradoFuerte: #BE9FE1;
+    --moradoLeve: #C9B6E4;
+    --moradoSuperLeve: #E1CCEC;
+    --blancoMorado: #F1F1F6;
+    --Titles: #8c6dae;
+    --separator: #ad75fa8f;
+    }   
+
+    main{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .form {
+        background-color: white;
+        width: 90vw;
+        max-width: 400px;
+        border-radius: 8px;
+        padding: 20px 40px;
+        box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    }
+
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: 50px;
+    }
+
+    .inputContainer {
+        position: relative;
+        height: 45px;
+        width: 90%;
+        margin-bottom: 17px;
+    }
+
+    /* Style the inputs */
+
+    .input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        border: 1px solid #c2bfbf;
+        border-radius: 7px;
+        font-size: 16px;
+        padding: 0 20px;
+        outline: none;
+        background: none;
+    }
+
+    /* Hide the placeholder texts (a) */
+
+    ::placeholder {
+        color: transparent;
+    }
+
+    /* Styling text labels */
+
+    .label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 0 4px;
+        background-color: white;
+        color: #555555;
+        font-size: 16px;
+        transition: 0.5s;
+        z-index: 0;
+    }
+
+    .submitBtn {
+        display: block;
+        margin-left: auto;
+        padding: 15px 30px;
+        border: none;
+        background-color: var(--moradoFuerte);
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .submitBtn:hover {
+        background-color: #473458;
+        transform: translateY(-2px);
+    }
+
+    .input:focus + .label {
+        top: -7px;
+        left: 3px;
+        z-index: 10;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--Titles);
+    }
+
+    .input:focus {
+        border: 2px solid var(--Titles);
+    }
+
+    .input:not(:placeholder-shown)+ .label {
+        top: -7px;
+        left: 3px;
+        z-index: 10;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+        .title{
+            font-size: 2rem;
+        }
+
+        .submitBtn {
+            padding: 15px 20px;
+        }
+    
+    }
+
+    @media (max-width: 310px) {
+        .inputContainer:nth-child(5) {
+            height: 80px;
+        }
+    
+    }

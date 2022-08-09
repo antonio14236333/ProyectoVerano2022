@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Antonio&family=Boogaloo&family=Cabin+Sketch&family=Fredoka+One&family=Indie+Flower&family=Kalam:wght@300;400&family=Montserrat&family=Voltaire&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../public/Css/Style-worker/nav-worker.css">
+<style>
+
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="container-header">
+            <div class="container-logo">
+                <img src="../../public/Img/Logo.png" alt="Logo de KAVA" class="logo">
+                <h1>KAVA</h1>
+            </div>
+            <div class="dropdown-container">
+                <span>Antonio &nbsp;<i class="fa-solid fa-caret-down"></i></span>
+                <ul id="list">
+                    <li>Configuración &nbsp;<i class="fa-solid fa-gear"></i></li>
+                    <div class="separator"></div>
+                    <li class="signOut">Sign Out &nbsp;<i class="fa-solid fa-right-from-bracket"></i></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="container-nav-left">
+                <h1>Menú</h1>
+                <div class="container-menu">
+                    <a href="./main.html" class="active"><i class="fa-solid fa-school"></i>&nbsp;&nbsp;<span>Grupos</span></a> 
+                    <a href="./Students/main-students.html"><i class="fa-solid fa-graduation-cap"></i>&nbsp;&nbsp;<span>Alumnos</span></a> 
+                    <a href="./Forms/main-forms.html"><i class="fa-solid fa-rectangle-list"></i>&nbsp;&nbsp;<span>Formularios</span></a>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="container-data">
+                <div class="search">
+                    <input type="text" placeholder="Buscar Grupo"> <button>Buscar</button>
+                </div>
+                <div class="order">
+                    <span>Orden: &nbsp;</span>
+                    <select name="" id="">
+                        <option value="">Reciente</option>
+                        <option value="">Antiguo</option>
+                        <option value="">A-Z</option>
+                        <option value="">Z-A</option>
+                    </select>
+                </div>
+                <div  class="new">
+                    <a href="">Crear Grupo <i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="elements">
+                    <ul>
+                        <li>
+                            <a href="">Grupo 1</a>
+                            <div class="config">
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href=""><i class="fa-solid fa-trash-can"></i></a>  
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Grupo 2</a>
+                            <div class="config">
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href=""><i class="fa-solid fa-trash-can"></i></a>  
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Grupo 3</a>
+                            <div class="config">
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href=""><i class="fa-solid fa-trash-can"></i></a>  
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Grupo 4</a>
+                            <div class="config">
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href=""><i class="fa-solid fa-trash-can"></i></a>  
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Grupo 5</a>
+                            <div class="config">
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> <a href=""><i class="fa-solid fa-trash-can"></i></a>  
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+<script>
+    document.querySelector(".dropdown-container").addEventListener("click", function(){
+        
+        document.querySelector(".dropdown-container ul").classList.toggle("show");
+    });
+        // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+        console.log(e);
+        if (!e.target.matches('.dropdown-container') && !e.target.matches('.dropdown-container span')) {
+            var myDropdown = document.getElementById("list");
+        console.log(myDropdown);
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+        }
+    }
+</script>
+<script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+</body>
+</html>
